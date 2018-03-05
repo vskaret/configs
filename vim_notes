@@ -1,0 +1,32 @@
+# div vim stuff
+
+# movement
+gj - move up one visual line (like in word, when there is one long line which takes up several visua lines)
+gk - move down one visual line
+
+# spellchecker
+in .vimrc: map <F6> :setlocal spell! spelllang=en_us<CR>
+
+# inner or outer objects
+diw - when inside of a word, it will delete all of it (like bdw)
+daw - delete the word and the whitespace around it
+das - delete the sentence and the whitespace around it
+dap - delete the paragraph and the whitespace around it
+
+# search and replace
+:%s/// - search in all lines
+:s/// - search in current line only
+///g - replace global (all hits, not only first)
+///c - confirm each replacement
+///i - case insensitive search
+/~// - use previous string
+
+# other search stuff
+/\<foo\>// - exactly matching 'foo'
+:noh - remove highlighting after search
+
+# indenting
+5>> - shifts five lines to the right
+
+# other
+J - join the line you're on with the line below it
