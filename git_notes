@@ -1,0 +1,30 @@
+# clone
+$ git clone <url>
+
+# add file to git
+$ git add <filename>
+
+# pull/push changes
+$ git pull origin master                  # pull
+$ git commit -am 'hello world'            # commit change
+$ git push origin master                  # push
+
+# tag commit
+$ git tag                                 # lists tags
+$ git tag <tagname> commithash            # tags commit
+$ git tag -d test                         # deletes tag 'test'
+$ git push origin <tagname>               # push only tag
+
+# revert to old file
+$ git log                                 # see commits
+$ git checkout <commithash> <filename>    # fileversion and file to recover
+$ git commit -a 'message'
+$ git push origin master
+
+# remove file
+$ git rm <filename>                       # removes both from git and local
+$ git rm --cached <filename>              # removes only from git
+$ git commit -m 'message'
+
+# change git url
+$ git remove set-url origin <url>
