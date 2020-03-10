@@ -330,6 +330,12 @@ you should place your code here."
     (interactive)
      (writeroom-adjust-width -5))
 
+  (defun write-adjust ()
+    "Start writeroom-mode and increase with by 5 (for latex)"
+    (interactive)
+    (writeroom-mode)
+    (writeroom-adjust-width 5))
+
   (setq org-latex-pdf-process
         '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
 
@@ -342,11 +348,12 @@ you should place your code here."
   ;;(spacemacs/set-leader-keys "oc" 'org-capture)
 
   ;; enable write-room mode
-  (spacemacs/set-leader-keys "ow" 'writeroom-mode)
+  (spacemacs/set-leader-keys "oq" 'writeroom-mode)
+  (spacemacs/set-leader-keys "ow" 'write-adjust)
 
   ;; adjust writeroom width
-  (spacemacs/set-leader-keys "oe" 'wider-room)
-  (spacemacs/set-leader-keys "oq" 'un-wider-room)
+  (spacemacs/set-leader-keys "or" 'wider-room)
+  (spacemacs/set-leader-keys "oe" 'un-wider-room)
 
   ;; keybindings in major modes
   (spacemacs/declare-prefix-for-mode 'latex-mode "o" "custom")
